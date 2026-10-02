@@ -16,7 +16,7 @@ skills/
 - **`send-invoice`** — emails an invoice, or marks it sent without emailing.
 - **`record-payment`** — records a payment against invoices, or marks an invoice paid.
 - **`convert-quote-to-invoice`** — approves/converts a quote into an invoice.
-- **`create-expense-from-receipt`** — reads a receipt or supplier invoice (image or PDF) and creates the expense from it.
+- **`create-expense-from-receipt`** — reads a receipt or supplier invoice (image or PDF) and creates the expense from it, with the file attached.
 - **`run-report`** — runs one of InvoiceNinja's reports (A/R, sales, tax, profit/loss, …).
 
 See the [Claude Code plugin docs](https://code.claude.com/docs/en/plugins) for the `SKILL.md` format, or the `superpowers:writing-skills` skill for a guided walkthrough.

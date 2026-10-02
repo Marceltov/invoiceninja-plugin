@@ -20,7 +20,7 @@ Claude picks a skill automatically when your request matches it, so you just ask
 
 ## Expenses
 
-- **`create-expense-from-receipt`**: Reads a receipt or supplier invoice (image or PDF) you give it and creates the expense, after you confirm the extracted details.
+- **`create-expense-from-receipt`**: Reads a receipt or supplier invoice (image or PDF) you give it and creates the expense with the file attached, after you confirm the extracted details. Needs a recent [invoiceninja-mcp](https://invoiceninja-mcp.marceltov.de/tools/) with its file upload route.
 
 ## Quotes and reports
 
