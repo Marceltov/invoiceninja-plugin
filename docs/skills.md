@@ -18,6 +18,10 @@ Claude picks a skill automatically when your request matches it, so you just ask
 - **`send-invoice`**: Emails an invoice, sends a reminder, or marks it sent. Confirms first.
 - **`record-payment`**: Records a payment against invoices, or marks an invoice paid. Confirms first.
 
+## Expenses
+
+- **`create-expense-from-receipt`**: Reads a receipt or supplier invoice (image or PDF) you give it and creates the expense, after you confirm the extracted details.
+
 ## Quotes and reports
 
 - **`convert-quote-to-invoice`**: Approves a quote or converts it into an invoice.
