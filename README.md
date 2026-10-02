@@ -5,7 +5,7 @@
     <img alt="requires invoiceninja-mcp sidecar" src="https://img.shields.io/badge/requires-invoiceninja--mcp_sidecar_running-critical">
   </a>
   <a href="https://invoiceninja-plugin.marceltov.de/">
-    <img alt="Documentation" src="https://img.shields.io/badge/docs-invoiceninja--plugin.marceltov.de-1f6fb2">
+    <img alt="Documentation" src="https://img.shields.io/badge/docs-invoiceninja--plugin.marceltov.de-2563eb">
   </a>
   <a href="LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg">
