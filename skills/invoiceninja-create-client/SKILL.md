@@ -1,11 +1,11 @@
 ---
-name: create-client
-description: Create a new InvoiceNinja client with contacts via the storeClient MCP tool. Use when the user asks to add, create or register a new client or customer in InvoiceNinja.
+name: invoiceninja-create-client
+description: Create a new Invoice Ninja client with contacts via the storeClient MCP tool. Use when the user asks to add, create or register a new client or customer in Invoice Ninja.
 ---
 
-# Create an InvoiceNinja Client
+# Create an Invoice Ninja Client
 
-If more than one InvoiceNinja instance is connected this session, resolve which one to use first — see [Working with multiple instances](../README.md#working-with-multiple-instances).
+If more than one Invoice Ninja instance is connected this session, resolve which one to use first — see [Working with multiple instances](reference/shared-rules.md#working-with-multiple-instances).
 
 ## Steps
 

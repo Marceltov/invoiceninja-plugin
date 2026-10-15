@@ -1,5 +1,6 @@
 {
   "name": "invoiceninja-plugin",
+  "description": "Claude Code plugin for Invoice Ninja: skills on top of the Invoice Ninja MCP server.",
   "owner": {
     "name": "Marcel Bruckner (Marceltov)"
   },
@@ -7,7 +8,7 @@
     {
       "name": "invoiceninja",
       "source": "./",
-      "description": "Skills plus the MCP connection to a running invoiceninja-mcp server."
+      "description": "Skills plus the MCP connection to a running Invoice Ninja MCP server."
     }
   ]
 }

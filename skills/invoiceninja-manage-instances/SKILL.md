@@ -1,13 +1,23 @@
 ---
-name: manage-invoiceninja-instances
-description: Configure connections to one or more invoiceninja-mcp deployments — add a new instance (URL + InvoiceNinja API token, optionally labeled), list which are configured/connected, or remove one. Every instance is registered as a user-scoped MCP server via `claude mcp add` (no settings.json editing, no bundled .mcp.json). Use when the invoiceninja MCP server is unconfigured, disconnected, or missing credentials (including when a SessionStart hook flags this), when the user asks to set up, configure, or connect the InvoiceNinja plugin, or when they want to add, remove, or list additional InvoiceNinja instances.
+name: invoiceninja-manage-instances
+description: Configure connections to one or more Invoice Ninja MCP server deployments — add a new instance (URL + Invoice Ninja API token, optionally labeled), list which are configured/connected, or remove one. Every instance is registered as a user-scoped MCP server via `claude mcp add` (no settings.json editing, no bundled .mcp.json). Use when the invoiceninja MCP server is unconfigured, disconnected, or missing credentials (including when a SessionStart hook flags this), when the user asks to set up, configure, or connect the Invoice Ninja plugin, or when they want to add, remove, or list additional Invoice Ninja instances.
 ---
 
-# Manage InvoiceNinja Instances
+# Manage Invoice Ninja Instances
 
-Every InvoiceNinja instance — including the first/default one — is its own MCP server registered with the `claude mcp add` CLI command, scoped `user` so it's available to every project under the current Claude Code installation. The default instance is named `invoiceninja`; each additional one is `invoiceninja-<label>` (e.g. `invoiceninja-work`). Claude Code exposes each server's tools under its own prefix (`mcp__invoiceninja__*`, `mcp__invoiceninja-work__*`, …); skills resolve which prefix to use per task — see [Working with multiple instances](../README.md#working-with-multiple-instances).
+Every Invoice Ninja instance — including the first/default one — is its own MCP server registered with the `claude mcp add` CLI command, scoped `user` so it's available to every project under the current Claude Code installation. The default instance is named `invoiceninja`; each additional one is `invoiceninja-<label>` (e.g. `invoiceninja-work`). Claude Code exposes each server's tools under its own prefix (`mcp__invoiceninja__*`, `mcp__invoiceninja-work__*`, …); skills resolve which prefix to use per task — see [Working with multiple instances](reference/shared-rules.md#working-with-multiple-instances).
 
 **This skill is the only way instances get configured.** Go through `claude mcp add`/`list`/`get`/`remove` only. Never write an `mcpServers` block into settings.json (it rejects the key) and never create a `.mcp.json`.
+
+## On claude.ai, the desktop app or Cowork
+
+There is no `claude` CLI there; an Invoice Ninja MCP server is connected as a **custom connector** instead. If Invoice Ninja tools are already available, say so and stop. Otherwise explain the steps, with the Invoice Ninja MCP server's public HTTPS URL ending in `/mcp`:
+
+1. The server needs OAuth enabled (`MCP_BASE_URL` and `MCP_OAUTH_SECRET` set); claude.ai can't send a token header.
+2. *Customize → Connectors → Add custom connector*: a name (for example `Invoice Ninja`) and the URL, keep the detected OAuth choices, then sign in with the Invoice Ninja email and password.
+3. Switch the connector on in the chat (**+ → Connectors**).
+
+Details: https://invoiceninja-mcp.marceltov.de/connecting/#with-oauth. Everything below applies to Claude Code only.
 
 ## Determine the operation
 
@@ -26,8 +36,8 @@ Figure out from the request whether the user wants to **add** a new instance, **
    Skip this step entirely for the first/default instance — it always stays unlabeled (server name `invoiceninja`).
 
 3. **Ask for the remaining values**, one at a time (plain question or `AskUserQuestion` if available):
-   - The instance's MCP URL. For the default instance, `http://localhost:8081/mcp` is a common value for a local `invoiceninja-mcp` sidecar — offer it as a suggestion, but still ask. For a labeled instance, there's no natural default — just ask.
-   - Its API token, created in InvoiceNinja under *Settings → Account Management → Integrations → API tokens*. Required, no default.
+   - The Invoice Ninja MCP server URL, ending in `/mcp`. For the default instance, `http://localhost:8081/mcp` is a common value for a local Invoice Ninja MCP server container — offer it as a suggestion, but still ask. For a labeled instance, there's no natural default — just ask.
+   - Its API token, created in Invoice Ninja under *Settings → Account Management → Integrations → API tokens*. Required, no default.
    - Never print the token back in a confirmation message or log it.
 
 4. **Register the instance** by running:

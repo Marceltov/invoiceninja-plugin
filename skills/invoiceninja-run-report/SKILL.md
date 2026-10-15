@@ -1,11 +1,11 @@
 ---
-name: run-report
-description: Run an InvoiceNinja report (A/R summary or detail, client balances, sales, tax, profit and loss, invoices, payments, expenses, products) via the get*Report MCP tools. Use when the user asks for a report, totals, sales figures, outstanding receivables or profit and loss over a period.
+name: invoiceninja-run-report
+description: Run an Invoice Ninja report (A/R summary or detail, client balances, sales, tax, profit and loss, invoices, payments, expenses, products) via the get*Report MCP tools. Use when the user asks for a report, totals, sales figures, outstanding receivables or profit and loss over a period.
 ---
 
-# Run an InvoiceNinja Report
+# Run an Invoice Ninja Report
 
-If more than one InvoiceNinja instance is connected this session, resolve which one to use first — see [Working with multiple instances](../README.md#working-with-multiple-instances).
+If more than one Invoice Ninja instance is connected this session, resolve which one to use first — see [Working with multiple instances](reference/shared-rules.md#working-with-multiple-instances).
 
 ## Tools
 
