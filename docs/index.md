@@ -22,7 +22,7 @@ A [Claude Code](https://code.claude.com) plugin with ready-made skills for [Invo
 
 ## What it does
 
-- **Sets up the connection.** If no InvoiceNinja is configured, a `SessionStart` hook notices and Claude offers to register one: it asks for the URL and API token and runs `claude mcp add` for you.
+- **Sets up the connection.** If no InvoiceNinja is configured, a `SessionStart` hook notices in your first session and Claude offers, once, to register one: it asks for the URL and API token and runs `claude mcp add` for you.
 - **Knows InvoiceNinja's workflows.** Skills cover invoice filters and statuses, bulk actions like email and mark-paid, quote conversion and reports, so Claude picks the right one of the server's [377 tools](https://invoiceninja-mcp.marceltov.de/tools/) instead of guessing.
 - **Handles several instances.** Skills ask which one you mean when it isn't clear.
 - **Asks before customer-visible changes.** Emailing an invoice or recording a payment is confirmed with you first.

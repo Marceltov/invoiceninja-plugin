@@ -15,7 +15,7 @@ In Claude Code:
 
 ## 3. Connect your InvoiceNinja
 
-Start a new Claude Code session. If no InvoiceNinja is configured, the plugin's `SessionStart` hook flags it and Claude offers to run the `manage-invoiceninja-instances` skill. You can also ask for it yourself at any time, for example "set up the InvoiceNinja plugin".
+Start a new Claude Code session. If no InvoiceNinja is configured, the plugin's `SessionStart` hook flags it and Claude offers to run the `manage-invoiceninja-instances` skill. It offers this once per installation, in the first session after you install the plugin; after that, ask for it yourself whenever you like, for example "set up the InvoiceNinja plugin".
 
 The skill asks for the invoiceninja-mcp URL and your API token and registers the instance under the name `invoiceninja`, scoped to your user so every project sees it. Configure instances only through this skill, so the names match what the other skills look for.
 
