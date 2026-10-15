@@ -8,7 +8,7 @@ skills/
     SKILL.md
 ```
 
-- **`manage-invoiceninja-instances`** — configures the connection to one or more InvoiceNinja instances by asking the user and registering each with `claude mcp add`. Triggered automatically by the `SessionStart` hook in `hooks/` when no instance is configured.
+- **`manage-invoiceninja-instances`** — configures the connection to one or more InvoiceNinja instances by asking the user and registering each with `claude mcp add`. Offered once per installation by the `SessionStart` hook in `hooks/`, in the first session without a configured instance.
 - **`find-clients`** — looks up clients by name, email, number or balance.
 - **`create-client`** — creates a client with its contacts.
 - **`find-invoices`** — lists invoices filtered by client, status, overdue/payable, number or date range.
