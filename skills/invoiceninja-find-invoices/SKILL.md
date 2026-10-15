@@ -1,17 +1,17 @@
 ---
-name: find-invoices
-description: List or search InvoiceNinja invoices by client, status, overdue/payable, number, text or date range using the getInvoices MCP tool. Use when the user asks which invoices are open, unpaid, overdue, paid, or asks to find an invoice by number or client.
+name: invoiceninja-find-invoices
+description: List or search Invoice Ninja invoices by client, status, overdue/payable, number, text or date range using the getInvoices MCP tool. Use when the user asks which invoices are open, unpaid, overdue, paid, or asks to find an invoice by number or client.
 ---
 
-# Find InvoiceNinja Invoices
+# Find Invoice Ninja Invoices
 
 A thin wrapper around `getInvoices`.
 
-If more than one InvoiceNinja instance is connected this session, resolve which one to use first — see [Working with multiple instances](../README.md#working-with-multiple-instances).
+If more than one Invoice Ninja instance is connected this session, resolve which one to use first — see [Working with multiple instances](reference/shared-rules.md#working-with-multiple-instances).
 
 ## Filters
 
-- `client_id` — one client's invoices (resolve a name with `find-clients` first).
+- `client_id` — one client's invoices (resolve a name with `invoiceninja-find-clients` first).
 - `client_status` — comma-separated `paid`, `unpaid`, `overdue`.
 - `overdue=true` / `payable=<client_id>` — overdue invoices / invoices that can still be paid.
 - `status_id` — `1` draft, `2` sent, `3` partial, `4` paid, `5` cancelled, `6` reversed.

@@ -1,6 +1,6 @@
 # Multiple instances
 
-You can connect more than one InvoiceNinja, for example separate accounts for two companies. Each needs its own [invoiceninja-mcp container](https://invoiceninja-mcp.marceltov.de/getting-started/) and is registered under its own name:
+You can connect more than one Invoice Ninja instance, for example separate accounts for two companies. Each needs its own [Invoice Ninja MCP server container](https://invoiceninja-mcp.marceltov.de/getting-started/) and is registered under its own name:
 
 | Instance | MCP server name | Tool prefix |
 | -------- | --------------- | ----------- |
@@ -9,7 +9,7 @@ You can connect more than one InvoiceNinja, for example separate accounts for tw
 
 ## Add, list or remove one
 
-Ask Claude, for example "add my work InvoiceNinja" or "which InvoiceNinja instances are connected?". The `manage-invoiceninja-instances` skill handles it:
+Ask Claude, for example "add my work Invoice Ninja instance" or "which Invoice Ninja instances are connected?". The `invoiceninja-manage-instances` skill handles it:
 
 - **Add:** asks for a label (like `work` or `home`), the URL and the API token, then registers `invoiceninja-<label>`. Restart Claude Code so it connects.
 - **List:** shows every configured instance and whether it's connected.

@@ -1,5 +1,5 @@
 #!/bin/bash
-# SessionStart hook: flags when no InvoiceNinja instance is configured at all, so
+# SessionStart hook: flags when no Invoice Ninja instance is configured at all, so
 # Claude can offer to run manage-invoiceninja-instances instead of the user
 # hitting a silent/failed MCP connection.
 set -euo pipefail
@@ -39,7 +39,7 @@ if [ -e "$marker" ]; then
 fi
 mkdir -p "$state_dir" 2>/dev/null && touch "$marker" 2>/dev/null || true
 
-context="No InvoiceNinja instance is configured: no invoiceninja/invoiceninja-<label> entry exists in ${claude_json_path}'s mcpServers, so there's no MCP connection to authenticate. Proactively offer to run the invoiceninja-plugin:manage-invoiceninja-instances skill with the user now (collects a URL and token for a new instance and registers it via 'claude mcp add' for this installation), unless they are already mid-task on something unrelated. This offer is made only once per installation; if the user declines or already reaches it another way (for example a claude.ai connector), drop it."
+context="No Invoice Ninja instance is configured: no invoiceninja/invoiceninja-<label> entry exists in ${claude_json_path}'s mcpServers, so there's no MCP connection to authenticate. Proactively offer to run the invoiceninja:invoiceninja-manage-instances skill with the user now (collects the Invoice Ninja MCP server URL and an Invoice Ninja API token for a new instance and registers it via 'claude mcp add' for this installation), unless they are already mid-task on something unrelated. This offer is made only once per installation; if the user declines or already reaches it another way (for example a claude.ai connector), drop it."
 
 printf '%s' "$input" | python3 -c '
 import json, sys

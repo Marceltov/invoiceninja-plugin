@@ -62,8 +62,9 @@ nav:
   - Guide:
       - Install and connect: install.md
       - Multiple instances: multiple-instances.md
+      - Use on claude.ai: claude-ai.md
       - Skills: skills.md
-  - invoiceninja-mcp (the server): https://invoiceninja-mcp.marceltov.de/
+  - Invoice Ninja MCP server: https://invoiceninja-mcp.marceltov.de/
 
 extra_css:
   - stylesheets/extra.css

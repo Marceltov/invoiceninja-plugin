@@ -1,13 +1,13 @@
 ---
-name: find-clients
-description: Look up InvoiceNinja clients by name, email, number, id number or balance using the getClients MCP tool. Use when the user asks to find, list, search or look up a client or customer, or when another skill needs a client id from a name.
+name: invoiceninja-find-clients
+description: Look up Invoice Ninja clients by name, email, number, id number or balance using the getClients MCP tool. Use when the user asks to find, list, search or look up a client or customer, or when another skill needs a client id from a name.
 ---
 
-# Find InvoiceNinja Clients
+# Find Invoice Ninja Clients
 
 A thin wrapper around `getClients`. Other skills use it to turn a client name into the hashed `client_id` they need.
 
-If more than one InvoiceNinja instance is connected this session, resolve which one to use first — see [Working with multiple instances](../README.md#working-with-multiple-instances).
+If more than one Invoice Ninja instance is connected this session, resolve which one to use first — see [Working with multiple instances](reference/shared-rules.md#working-with-multiple-instances).
 
 ## Steps
 

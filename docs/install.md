@@ -1,8 +1,8 @@
 # Install and connect
 
-## 1. Deploy invoiceninja-mcp
+## 1. Deploy the Invoice Ninja MCP server
 
-The plugin talks to InvoiceNinja through a running [invoiceninja-mcp](https://invoiceninja-mcp.marceltov.de/) server. Set that up first with its [quick start](https://invoiceninja-mcp.marceltov.de/getting-started/), and create an API token under *Settings → Account Management → Integrations → API tokens* in InvoiceNinja.
+The plugin talks to Invoice Ninja through a running [Invoice Ninja MCP server](https://invoiceninja-mcp.marceltov.de/). Set that up first with its [quick start](https://invoiceninja-mcp.marceltov.de/getting-started/), and create an API token under *Settings → Account Management → Integrations → API tokens* in Invoice Ninja.
 
 ## 2. Install the plugin
 
@@ -13,11 +13,11 @@ In Claude Code:
 /plugin install invoiceninja
 ```
 
-## 3. Connect your InvoiceNinja
+## 3. Connect your Invoice Ninja instance
 
-Start a new Claude Code session. If no InvoiceNinja is configured, the plugin's `SessionStart` hook flags it and Claude offers to run the `manage-invoiceninja-instances` skill. It offers this once per installation, in the first session after you install the plugin; after that, ask for it yourself whenever you like, for example "set up the InvoiceNinja plugin".
+Start a new Claude Code session. If no Invoice Ninja instance is configured, the plugin's `SessionStart` hook flags it and Claude offers to run the `invoiceninja-manage-instances` skill. It offers this once per installation, in the first session after you install the plugin; after that, ask for it yourself whenever you like, for example "set up the Invoice Ninja plugin".
 
-The skill asks for the invoiceninja-mcp URL and your API token and registers the instance under the name `invoiceninja`, scoped to your user so every project sees it. Configure instances only through this skill, so the names match what the other skills look for.
+The skill asks for the Invoice Ninja MCP server URL and your API token and registers the instance under the name `invoiceninja`, scoped to your user so every project sees it. Configure instances only through this skill, so the names match what the other skills look for.
 
 Restart Claude Code afterwards: a newly registered server only connects on the next launch.
 
